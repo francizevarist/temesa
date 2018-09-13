@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:layout_centerVertical="true">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal"/>
+
+        
+    <RelativeLayout
+        android:id="@+id/error"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/form_error"
+        android:visibility="gone">
+    <TextView
+        android:id="@+id/text_errormessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Invalid credentials"
+        android:textColor="@color/colorRed"
+        android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/success"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/form_success"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/text_successmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Invalid credentials"
+            android:textColor="@color/colorSuccessStroke"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_person_black_24dp"
+            android:layout_gravity="center_vertical"
+            android:padding="3dp"
+            />
+
+        <EditText
+            android:id="@+id/edittext_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/form_style"
+            android:hint="@string/hint_username"
+            android:textSize="14sp"
+            android:inputType="textPersonName"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_lock_black_24dp"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"/>
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/form_style"
+            android:hint="@string/hint_password"
+            android:textSize="14sp"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/signin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorAccent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            android:textStyle="normal"/>
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <com.pos.helper.MaterialProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:duration="2000"
+            app:progressColour="@color/colorRed"
+            app:backgroundColour="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
